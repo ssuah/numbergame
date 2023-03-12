@@ -1,4 +1,4 @@
-// 필요한 html elements 다 가져오기
+
 let computerNumber = 0;
 let playButton = document.getElementById("play-button");
 let resetButton = document.querySelector(".button-reset");
@@ -7,8 +7,8 @@ let resultAreaImg = document.querySelector(".main-img");
 let resultText = document.querySelector(".result-text");
 let chanceArea = document.getElementById("chance-area");
 let gameOver = false;
-let chances = 5; // 남은 기회
-let userValueList = []; // 유저가 입력한 숫자들 리스트
+let chances = 5; 
+let userValueList = []; 
 
 chanceArea.innerHTML = `남은 기회:${chances}`;
 playButton.addEventListener("click", play);
@@ -16,14 +16,14 @@ resetButton.addEventListener("click", reset);
 userInput.addEventListener("focus", focusInput);
 
 function pickRandomNumber() {
-  // 랜덤숫자 뽑기
+  
 
   computerNumber = Math.floor(Math.random() * 100) + 1;
   console.log("정답", computerNumber);
 }
 
 function play() {
-  // 숫자 추측하기
+  
   const userValue = userInput.value;
   if (userValue < 1 || userValue > 100) {
     resultText.textContent = "1부터 100 사이의 숫자를 입력 해주세요";
@@ -68,7 +68,7 @@ function focusInput() {
 }
 
 function reset() {
-  //리셋
+ 
   pickRandomNumber();
   userInput.value = "";
   resultAreaImg.src =
