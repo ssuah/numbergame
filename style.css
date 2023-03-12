@@ -1,12 +1,14 @@
 body {
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(back.jpg)
   }
+ 
   
   .container {
     border: 10px solid white;
